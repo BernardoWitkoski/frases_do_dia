@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -19,14 +21,21 @@ class _HomeState extends State<Home> {
   var _fraseGerada = "Clique abaixo para gerar uma frase";
 
   void _gerarFrase() {
-    print("botao");
+    var numeroSorteado = Random().nextInt(_frases.length);
+
+  setState(() {
+    _fraseGerada = _frases[numeroSorteado];
+  });
+
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Frases do dia"),
+        title: Center(
+          child: Text("Frases do dia"),
+        ),
         backgroundColor: Colors.green,
       ),
       body: Center(
