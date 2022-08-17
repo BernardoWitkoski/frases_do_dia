@@ -18,7 +18,9 @@ class _HomeState extends State<Home> {
 
   var _fraseGerada = "Clique abaixo para gerar uma frase";
 
-  void _gerarFrase() {}
+  void _gerarFrase() {
+    print("botao");
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +30,13 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.green,
       ),
       body: Container(
-        
+        child: Column(
+          children: [
+            Image.asset("images/frasesDoDia.png"),
+            Text(_fraseGerada),
+            ElevatedButton(onPressed: _gerarFrase, child: Text("Nova frase"))
+          ],
+        ),
       ),
     );
   }
