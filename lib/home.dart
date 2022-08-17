@@ -29,15 +29,26 @@ class _HomeState extends State<Home> {
         title: Text("Frases do dia"),
         backgroundColor: Colors.green,
       ),
-      body: Container(
+      body: Center(
+        child: Container(
+        padding: EdgeInsets.all(16),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.asset("images/frasesDoDia.png"),
-            Text(_fraseGerada),
+            Text(_fraseGerada,
+              textAlign: TextAlign.justify,
+              style: const TextStyle(
+                fontSize: 25,
+                fontStyle: FontStyle.italic,
+                color: Colors.black),
+            ),
             ElevatedButton(onPressed: _gerarFrase, child: Text("Nova frase"))
           ],
         ),
       ),
+      )
     );
   }
 }
