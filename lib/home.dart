@@ -44,7 +44,17 @@ class _HomeState extends State<Home> {
                 fontStyle: FontStyle.italic,
                 color: Colors.black),
             ),
-            ElevatedButton(onPressed: _gerarFrase, child: Text("Nova frase"))
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: Colors.green,
+                elevation: 1,
+                fixedSize: Size(220.0, 80.0),
+              ),
+              onPressed: _gerarFrase,
+              child: Text(
+                "Nova frase",
+                style: TextStyle(fontSize: 20),
+              ))
           ],
         ),
       ),
