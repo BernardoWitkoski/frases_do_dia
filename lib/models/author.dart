@@ -4,7 +4,7 @@ class Author {
 
   Author(
       this.id,
-      this.name;
+      this.name,
   );
 
   @override
