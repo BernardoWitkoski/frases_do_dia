@@ -7,7 +7,7 @@ void createDataBase() {
     openDatabase(path, onCreate: (db, version){
       db.execute('CREATE TABLE author('
           'id INTEGER PRIMARY KEY,'
-          'name TEXT');
+          'name TEXT)');
     }, version: 1);
   });
 }
